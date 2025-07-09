@@ -1,0 +1,551 @@
+[gd_scene load_steps=7 format=3 uid="uid://cihh355ikp8h1"]
+
+[ext_resource type="Script" uid="uid://dvuvwyc7223vl" path="res://Levels/level_1.gd" id="1_w77jt"]
+[ext_resource type="PackedScene" uid="uid://bh7b7nt1l6wut" path="res://Scenes/Player/cursor.tscn" id="2_3anf8"]
+[ext_resource type="PackedScene" uid="uid://c4da8tq7x2fxb" path="res://Scenes/Player/detection_sphere.tscn" id="3_fhqol"]
+[ext_resource type="PackedScene" uid="uid://cub42feg15oas" path="res://Scenes/Environment/wall_1.tscn" id="4_iotdp"]
+[ext_resource type="PackedScene" uid="uid://8h4jp1t3yly6" path="res://Exit.tscn" id="5_nutv8"]
+[ext_resource type="PackedScene" uid="uid://dt2y86l3hlkwe" path="res://Scenes/Environment/stopwatch.tscn" id="6_05pb0"]
+
+[node name="Level" type="Node2D" groups=["Walls"]]
+script = ExtResource("1_w77jt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="cursor" parent="." instance=ExtResource("2_3anf8")]
+
+[node name="detection" parent="." instance=ExtResource("3_fhqol")]
+
+[node name="Exit" parent="." instance=ExtResource("5_nutv8")]
+position = Vector2(512, 192)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_top = 32.0
+offset_right = 176.0
+offset_bottom = 120.0
+theme_override_font_sizes/normal_font_size = 21
+text = "Left Click for Pulse"
+horizontal_alignment = 1
+
+[node name="Stopwatch" parent="." instance=ExtResource("6_05pb0")]
+position = Vector2(496, 0)
+
+[node name="Wall_1" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(48, 128)
+
+[node name="Wall_2" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(32, 128)
+
+[node name="Wall_3" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(16, 128)
+
+[node name="Wall_4" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(0, 128)
+
+[node name="Wall_5" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 48)
+
+[node name="Wall_6" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 32)
+
+[node name="Wall_7" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 16)
+
+[node name="Wall_8" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 0)
+
+[node name="Wall_11" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 128)
+
+[node name="Wall_12" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(64, 128)
+
+[node name="Wall_63" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(144, 544)
+
+[node name="Wall_64" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(128, 544)
+
+[node name="Wall_67" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(112, 544)
+
+[node name="Wall_68" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(96, 544)
+
+[node name="Wall_69" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 544)
+
+[node name="Wall_70" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(160, 544)
+
+[node name="Wall_71" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(224, 544)
+
+[node name="Wall_72" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(208, 544)
+
+[node name="Wall_73" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(192, 544)
+
+[node name="Wall_74" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(256, 544)
+
+[node name="Wall_75" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(240, 544)
+
+[node name="Wall_76" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(304, 544)
+
+[node name="Wall_77" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(288, 544)
+
+[node name="Wall_78" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(272, 544)
+
+[node name="Wall_79" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(336, 544)
+
+[node name="Wall_80" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(320, 544)
+
+[node name="Wall_81" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(384, 544)
+
+[node name="Wall_82" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(368, 544)
+
+[node name="Wall_83" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(352, 544)
+
+[node name="Wall_84" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(416, 544)
+
+[node name="Wall_85" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(400, 544)
+
+[node name="Wall_86" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(464, 544)
+
+[node name="Wall_87" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(448, 544)
+
+[node name="Wall_88" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(432, 544)
+
+[node name="Wall_89" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 544)
+
+[node name="Wall_90" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(480, 544)
+
+[node name="Wall_143" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 544)
+
+[node name="Wall_144" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(528, 544)
+
+[node name="Wall_145" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(512, 544)
+
+[node name="Wall_146" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(576, 544)
+
+[node name="Wall_147" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(560, 544)
+
+[node name="Wall_13" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 112)
+
+[node name="Wall_14" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 96)
+
+[node name="Wall_15" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 80)
+
+[node name="Wall_16" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 64)
+
+[node name="Wall_17" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 176)
+
+[node name="Wall_18" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 160)
+
+[node name="Wall_19" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 144)
+
+[node name="Wall_20" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 128)
+
+[node name="Wall_21" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 240)
+
+[node name="Wall_22" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 224)
+
+[node name="Wall_23" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 208)
+
+[node name="Wall_24" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 192)
+
+[node name="Wall_9" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 192)
+
+[node name="Wall_10" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 176)
+
+[node name="Wall_25" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 160)
+
+[node name="Wall_26" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 144)
+
+[node name="Wall_27" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 256)
+
+[node name="Wall_28" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 240)
+
+[node name="Wall_29" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 224)
+
+[node name="Wall_30" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 208)
+
+[node name="Wall_31" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 320)
+
+[node name="Wall_32" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 304)
+
+[node name="Wall_33" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 288)
+
+[node name="Wall_34" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 272)
+
+[node name="Wall_35" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 384)
+
+[node name="Wall_36" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 368)
+
+[node name="Wall_37" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 352)
+
+[node name="Wall_38" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 336)
+
+[node name="Wall_39" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 304)
+
+[node name="Wall_40" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 288)
+
+[node name="Wall_41" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 272)
+
+[node name="Wall_42" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 256)
+
+[node name="Wall_43" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 368)
+
+[node name="Wall_44" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 352)
+
+[node name="Wall_45" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 336)
+
+[node name="Wall_46" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 320)
+
+[node name="Wall_47" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 432)
+
+[node name="Wall_48" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 416)
+
+[node name="Wall_49" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 400)
+
+[node name="Wall_50" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 384)
+
+[node name="Wall_54" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(176, 448)
+
+[node name="Wall_115" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 352)
+
+[node name="Wall_118" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 336)
+
+[node name="Wall_119" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 320)
+
+[node name="Wall_120" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 416)
+
+[node name="Wall_121" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 400)
+
+[node name="Wall_122" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 384)
+
+[node name="Wall_123" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 368)
+
+[node name="Wall_124" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 448)
+
+[node name="Wall_125" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 432)
+
+[node name="Wall_148" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 224)
+
+[node name="Wall_149" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 208)
+
+[node name="Wall_150" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 192)
+
+[node name="Wall_151" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 288)
+
+[node name="Wall_152" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 272)
+
+[node name="Wall_153" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 256)
+
+[node name="Wall_154" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 240)
+
+[node name="Wall_155" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 304)
+
+[node name="Wall_156" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 224)
+
+[node name="Wall_157" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 208)
+
+[node name="Wall_158" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 192)
+
+[node name="Wall_159" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 288)
+
+[node name="Wall_160" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 272)
+
+[node name="Wall_161" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 256)
+
+[node name="Wall_162" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 240)
+
+[node name="Wall_163" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 304)
+
+[node name="Wall_126" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 352)
+
+[node name="Wall_127" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 336)
+
+[node name="Wall_128" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 320)
+
+[node name="Wall_129" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 416)
+
+[node name="Wall_130" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 400)
+
+[node name="Wall_131" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 384)
+
+[node name="Wall_132" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 368)
+
+[node name="Wall_133" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 448)
+
+[node name="Wall_134" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 432)
+
+[node name="Wall_137" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 480)
+
+[node name="Wall_138" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 464)
+
+[node name="Wall_139" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 512)
+
+[node name="Wall_140" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 496)
+
+[node name="Wall_141" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 544)
+
+[node name="Wall_142" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 528)
+
+[node name="Wall_55" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 448)
+
+[node name="Wall_56" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 432)
+
+[node name="Wall_57" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 416)
+
+[node name="Wall_58" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 400)
+
+[node name="Wall_59" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 512)
+
+[node name="Wall_60" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 496)
+
+[node name="Wall_61" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 480)
+
+[node name="Wall_62" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 464)
+
+[node name="Wall_65" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 544)
+
+[node name="Wall_91" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(208, 448)
+
+[node name="Wall_92" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(192, 448)
+
+[node name="Wall_95" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(240, 448)
+
+[node name="Wall_96" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(224, 448)
+
+[node name="Wall_97" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(288, 448)
+
+[node name="Wall_98" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(272, 448)
+
+[node name="Wall_99" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(256, 448)
+
+[node name="Wall_100" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(320, 448)
+
+[node name="Wall_101" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(304, 448)
+
+[node name="Wall_102" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(368, 448)
+
+[node name="Wall_103" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(352, 448)
+
+[node name="Wall_104" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(336, 448)
+
+[node name="Wall_105" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(400, 448)
+
+[node name="Wall_106" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(384, 448)
+
+[node name="Wall_107" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(448, 448)
+
+[node name="Wall_108" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(432, 448)
+
+[node name="Wall_109" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(416, 448)
+
+[node name="Wall_164" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(512, 176)
+
+[node name="Wall_172" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 176)
+
+[node name="Wall_173" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 176)
+
+[node name="Wall_174" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(640, 320)
+
+[node name="Wall_175" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(624, 320)
+
+[node name="Wall_176" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(608, 320)
+
+[node name="Wall_177" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(528, 320)
+
+[node name="Wall_178" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(512, 320)
+
+[node name="Wall_179" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 320)
+
+[node name="Wall_165" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(560, 176)
+
+[node name="Wall_166" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(544, 176)
+
+[node name="Wall_167" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(528, 176)
+
+[node name="Wall_168" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(592, 176)
+
+[node name="Wall_169" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(576, 176)
+
+[node name="Wall_170" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(624, 176)
+
+[node name="Wall_171" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(608, 176)
+
+[node name="Wall_110" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(480, 448)
+
+[node name="Wall_111" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(464, 448)
+
+[node name="Wall_112" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(528, 448)
+
+[node name="Wall_113" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(512, 448)
+
+[node name="Wall_114" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(496, 448)
+
+[node name="Wall_66" parent="." groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 528)
+
+[node name="TestLabel" type="Label" parent="."]
+offset_left = 504.0
+offset_top = 64.0
+offset_right = 640.0
+offset_bottom = 144.0
+text = "TestLabel"

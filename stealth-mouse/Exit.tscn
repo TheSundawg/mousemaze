@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://8h4jp1t3yly6"]
+
+[ext_resource type="Script" uid="uid://s5cvaotnlh4x" path="res://Scripts/exit.gd" id="1_vs230"]
+[ext_resource type="Texture2D" uid="uid://co0xtgehnpnjn" path="res://Sprites/exit.png" id="2_v5bdx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5bdx"]
+size = Vector2(128, 128)
+
+[sub_resource type="QuadMesh" id="QuadMesh_bf2d0"]
+
+[sub_resource type="Animation" id="Animation_v5bdx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vs230"]
+resource_name = "pulse"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bf2d0"]
+_data = {
+&"RESET": SubResource("Animation_v5bdx"),
+&"pulse": SubResource("Animation_vs230")
+}
+
+[node name="Exit" type="Node2D"]
+script = ExtResource("1_vs230")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_v5bdx")
+
+[node name="ExitArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
+position = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_v5bdx")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="ExitArea"]
+visible = false
+modulate = Color(0.0962153, 0.593073, 1.92523e-07, 0.388235)
+position = Vector2(64, 64)
+scale = Vector2(128, 128)
+mesh = SubResource("QuadMesh_bf2d0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bf2d0")
+}
+
+[connection signal="area_entered" from="ExitArea" to="." method="_on_exit_area_area_entered"]

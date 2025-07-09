@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt2y86l3hlkwe"]
+
+[ext_resource type="Script" uid="uid://db4edfbntxud" path="res://Scripts/stopwatch.gd" id="1_73cjp"]
+
+[node name="Stopwatch" type="Node2D"]
+script = ExtResource("1_73cjp")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 192.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 35
+text = "00:00:000"
+vertical_alignment = 1
+justification_flags = 0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

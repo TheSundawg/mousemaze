@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://cub42feg15oas"]
+
+[ext_resource type="Script" uid="uid://dxxhnikk5lbn8" path="res://Scenes/Environment/wall_1.gd" id="1_ce1lh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cpc2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpc2q"]
+size = Vector2(16, 16)
+
+[sub_resource type="Animation" id="Animation_cpc2q"]
+resource_name = "Flash"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 1, 1, 1), Color(0, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ce1lh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jinhm"]
+_data = {
+&"Flash": SubResource("Animation_cpc2q"),
+&"RESET": SubResource("Animation_ce1lh")
+}
+
+[node name="Wall_1" type="Node2D"]
+script = ExtResource("1_ce1lh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(8, 8)
+scale = Vector2(16, 16)
+mesh = SubResource("BoxMesh_cpc2q")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="WallCollision" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_cpc2q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jinhm")
+}
+movie_quit_on_finish = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

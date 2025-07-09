@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxmhmglv582ti"]
+
+[ext_resource type="Script" uid="uid://budt6t40im7b8" path="res://Scripts/level_0.gd" id="1_p2hwe"]
+[ext_resource type="PackedScene" uid="uid://bh7b7nt1l6wut" path="res://Scenes/Player/cursor.tscn" id="2_p2hwe"]
+[ext_resource type="PackedScene" uid="uid://c4da8tq7x2fxb" path="res://Scenes/Player/detection_sphere.tscn" id="3_8ni6x"]
+[ext_resource type="PackedScene" uid="uid://8h4jp1t3yly6" path="res://Exit.tscn" id="4_p2hwe"]
+
+[node name="Level" type="Node2D" groups=["Walls"]]
+script = ExtResource("1_p2hwe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="cursor" parent="." instance=ExtResource("2_p2hwe")]
+
+[node name="detection" parent="." instance=ExtResource("3_8ni6x")]
+process_mode = 4
+
+[node name="Exit" parent="." groups=["Levels"] instance=ExtResource("4_p2hwe")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Exit"]
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_font_sizes/normal_font_size = 27
+text = "Mouse Here to Start"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
