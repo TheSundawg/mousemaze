@@ -53,7 +53,7 @@ func _on_area_entered(area, mouse):
 	elif lives_left == -1:
 		get_tree().change_scene_to_file("res://Levels/MainMenu.tscn")
 	else:
-		lives_left -= 1
+		lives_left = lives_left - 1
 		get_viewport().warp_mouse(spawn)
 		
 	#if lives_left < 3 and lives_left > 1:

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://budt6t40im7b8" path="res://Scripts/level_0.gd" id="1_p2hwe"]
 [ext_resource type="PackedScene" uid="uid://bh7b7nt1l6wut" path="res://Scenes/Player/cursor.tscn" id="2_p2hwe"]
 [ext_resource type="PackedScene" uid="uid://c4da8tq7x2fxb" path="res://Scenes/Player/detection_sphere.tscn" id="3_8ni6x"]
-[ext_resource type="PackedScene" uid="uid://8h4jp1t3yly6" path="res://Exit.tscn" id="4_p2hwe"]
+[ext_resource type="PackedScene" uid="uid://47d3e7bgif64" path="res://Exit.tscn" id="4_p2hwe"]
 
 [node name="Level" type="Node2D" groups=["Walls"]]
 script = ExtResource("1_p2hwe")

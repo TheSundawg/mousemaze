@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bh7b7nt1l6wut" path="res://Scenes/Player/cursor.tscn" id="2_v115i"]
 [ext_resource type="PackedScene" uid="uid://c4da8tq7x2fxb" path="res://Scenes/Player/detection_sphere.tscn" id="3_jglcl"]
 [ext_resource type="PackedScene" uid="uid://cub42feg15oas" path="res://Scenes/Environment/wall_1.tscn" id="5_jglcl"]
-[ext_resource type="PackedScene" uid="uid://8h4jp1t3yly6" path="res://Exit.tscn" id="5_v115i"]
+[ext_resource type="PackedScene" uid="uid://47d3e7bgif64" path="res://Exit.tscn" id="5_v115i"]
 [ext_resource type="PackedScene" uid="uid://dt2y86l3hlkwe" path="res://Scenes/Environment/stopwatch.tscn" id="6_jglcl"]
-[ext_resource type="PackedScene" uid="uid://c6dne30w0384s" path="res://Scoreboard.tscn" id="7_w0h0a"]
+[ext_resource type="PackedScene" uid="uid://2ak12mg4a86m" path="res://Scoreboard.tscn" id="7_w0h0a"]
 
 [node name="Level" type="Node2D" groups=["Levels", "Walls"]]
 script = ExtResource("1_v115i")
