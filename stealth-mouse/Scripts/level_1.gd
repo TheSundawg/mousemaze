@@ -11,6 +11,8 @@ var wall_instance: Area2D
 var prev_level = "res://Levels/MainMenu.tscn"
 var this_level = "res://Levels/Level1.tscn"
 var next_level = "res://Levels/Level2.tscn"
+var lives_left: int
+
 
 # Input Related Functions
 func _quit_game():
@@ -40,6 +42,7 @@ func _sprite_cursor():
 		cursor.position.y = mouse_position.y
 
 func _on_area_entered(area, mouse):
+	var spawn = $spawn_pos.position
 	if area.get_parent() is Node2D and exit == false and area.get_parent().has_node("AnimationPlayer") and !mouse.get_parent().has_node("DeathBox"):
 		var area_instance = area.get_parent()
 		area_instance.get_node("AnimationPlayer").play("Flash")
@@ -47,8 +50,20 @@ func _on_area_entered(area, mouse):
 		$Exit/AnimationPlayer.play("pulse")
 	elif exit == true:
 		return
+	elif lives_left == -1:
+		get_tree().change_scene_to_file("res://Levels/MainMenu.tscn")
 	else:
-		get_tree().change_scene_to_file(prev_level)
+		lives_left -= 1
+		get_viewport().warp_mouse(spawn)
+		
+	#if lives_left < 3 and lives_left > 1:
+	#	$"LifeBox/Heart 3".visible = false
+	#elif $"LifeBox/Heart 3".visible == false and lives_left < 2 and lives_left > 0:
+	#	$"LifeBox/Heart 2".visible = false
+	
+	
+
+
 
 func _on_pass_timer_time(stringy):
 	$Score/TimeScore.text = stringy
@@ -63,12 +78,10 @@ func _on_exit_level(area, mouse):
 
 func _ready():
 	var spawn = $spawn_pos.position
-	
+	lives_left = 3
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	get_viewport().warp_mouse(spawn)
-	
-	
 	
 	GlobalEvents.area_entered.connect(_on_area_entered)
 	GlobalEvents.pass_timer_time.connect(_on_pass_timer_time)
@@ -79,3 +92,4 @@ func _process(float):
 	_quit_game()
 	_sprite_cursor()
 	_detection_sphere()
+	

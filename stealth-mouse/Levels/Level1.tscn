@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cihh355ikp8h1"]
+[gd_scene load_steps=9 format=3 uid="uid://cihh355ikp8h1"]
 
 [ext_resource type="Script" uid="uid://dvuvwyc7223vl" path="res://Scripts/level_1.gd" id="1_w77jt"]
 [ext_resource type="PackedScene" uid="uid://bh7b7nt1l6wut" path="res://Scenes/Player/cursor.tscn" id="2_3anf8"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://8h4jp1t3yly6" path="res://Exit.tscn" id="5_nutv8"]
 [ext_resource type="PackedScene" uid="uid://dt2y86l3hlkwe" path="res://Scenes/Environment/stopwatch.tscn" id="6_05pb0"]
 [ext_resource type="PackedScene" uid="uid://c6dne30w0384s" path="res://Scoreboard.tscn" id="7_dl8mf"]
+[ext_resource type="Texture2D" uid="uid://sku3j02wkty0" path="res://Sprites/heart.png" id="8_xcayt"]
 
 [node name="Level" type="Node2D" groups=["Levels", "Walls"]]
 script = ExtResource("1_w77jt")
@@ -539,7 +540,6 @@ position = Vector2(496, 448)
 position = Vector2(80, 528)
 
 [node name="TestLabel" type="Label" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 
@@ -548,3 +548,21 @@ visible = false
 
 [node name="spawn_pos" type="Node2D" parent="."]
 position = Vector2(64, 64)
+
+[node name="LifeBox" type="HBoxContainer" parent="."]
+offset_left = 344.0
+offset_top = 8.0
+offset_right = 488.0
+offset_bottom = 56.0
+
+[node name="Heart 1" type="Sprite2D" parent="LifeBox"]
+position = Vector2(24, 24)
+texture = ExtResource("8_xcayt")
+
+[node name="Heart 2" type="Sprite2D" parent="LifeBox"]
+position = Vector2(72, 24)
+texture = ExtResource("8_xcayt")
+
+[node name="Heart 3" type="Sprite2D" parent="LifeBox"]
+position = Vector2(120, 24)
+texture = ExtResource("8_xcayt")

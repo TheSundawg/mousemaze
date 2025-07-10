@@ -2,8 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://35ct4l6cxy8e" path="res://Sprites/Cursor.png" id="1_dtneu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtneu"]
-
 [sub_resource type="Animation" id="Animation_g30nb"]
 length = 0.001
 tracks/0/type = "value"
@@ -41,18 +39,21 @@ _data = {
 &"pulse_activated": SubResource("Animation_dtneu")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtneu"]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("1_dtneu")
 
-[node name="DeathBox" type="Area2D" parent="Sprite2D"]
-
-[node name="Don\'tTouchMe" type="CollisionShape2D" parent="Sprite2D/DeathBox"]
-shape = SubResource("RectangleShape2D_dtneu")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_2px4r")
 }
+
+[node name="DeathBox" type="Area2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="Don\'tTouchMe" type="CollisionShape2D" parent="DeathBox"]
+shape = SubResource("RectangleShape2D_dtneu")

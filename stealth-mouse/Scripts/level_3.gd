@@ -7,6 +7,7 @@ var pulsible: bool
 var wall_anim: AnimationPlayer
 var wall_array: Array
 var wall_instance: Area2D
+var lives_left = 3
 
 var prev_level = "res://Levels/Level2.tscn"
 var this_level = "res://Levels/Level3.tscn"
@@ -52,6 +53,7 @@ func _sprite_cursor():
 		cursor.position.y = mouse_position.y
 
 func _on_area_entered(area, mouse):
+	var spawn = $spawn_pos.position
 	if area.get_parent() is Node2D and exit == false and area.get_parent().has_node("AnimationPlayer") and !mouse.get_parent().has_node("DeathBox"):
 		var area_instance = area.get_parent()
 		area_instance.get_node("AnimationPlayer").play("Flash")
@@ -59,8 +61,11 @@ func _on_area_entered(area, mouse):
 		$Exit/AnimationPlayer.play("pulse")
 	elif exit == true:
 		return
-	else:
+	elif lives_left == -1:
 		get_tree().change_scene_to_file(prev_level)
+	else:
+		lives_left -= 1
+		get_viewport().warp_mouse(spawn)
 
 func _on_pass_timer_time(stringy):
 	$Score/TimeScore.text = stringy
