@@ -1,8 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://2ak12mg4a86m"]
+[gd_scene load_steps=8 format=3 uid="uid://2ak12mg4a86m"]
 
-[ext_resource type="Script" path="res://scoreboard.gd" id="1_1oo4x"]
+[ext_resource type="Script" uid="uid://c2oeigaxxtgbj" path="res://Scripts/scoreboard.gd" id="1_1oo4x"]
+[ext_resource type="FontFile" uid="uid://cbxucjnksoerc" path="res://Fonts/RosesareFF0000.ttf" id="2_5jfn8"]
+[ext_resource type="FontFile" uid="uid://byc5ev6pl45gw" path="res://Fonts/PixelSplitter-Bold.ttf" id="3_ide3a"]
+[ext_resource type="FontFile" uid="uid://b61t35i38ddok" path="res://Fonts/plasmati.ttf" id="4_ide3a"]
 
-[node name="Control" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_6ddnf"]
+font = ExtResource("4_ide3a")
+font_size = 25
+outline_size = 1
+outline_color = Color(0, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_liy5r"]
+font = ExtResource("4_ide3a")
+font_size = 25
+outline_size = 1
+outline_color = Color(0, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bfi20"]
+font = ExtResource("4_ide3a")
+font_size = 25
+outline_size = 1
+outline_color = Color(0, 1, 1, 1)
+
+[node name="Score" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,38 +36,94 @@ script = ExtResource("1_1oo4x")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-color = Color(0, 0.270588, 0, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 120.0
+offset_right = 440.0
+offset_bottom = 520.0
+color = Color(0.0768358, 0.0768358, 0.0768358, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.012
 anchor_bottom = 0.012
-offset_left = 448.0
-offset_top = 440.224
-offset_right = 704.0
-offset_bottom = 552.224
+offset_left = 576.0
+offset_top = 312.224
+offset_right = 832.0
+offset_bottom = 424.224
 
 [node name="Continue" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jfn8")
 text = "CONTINUE"
+flat = true
 
 [node name="Try Again" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jfn8")
 text = "TRY AGAIN"
+flat = true
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jfn8")
 text = "QUIT"
+flat = true
 
 [node name="TimeScore" type="Label" parent="."]
 layout_mode = 0
-offset_left = 448.0
-offset_top = 128.0
-offset_right = 704.0
-offset_bottom = 240.0
+offset_left = 544.0
+offset_top = 184.0
+offset_right = 873.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("3_ide3a")
 theme_override_font_sizes/font_size = 55
 text = "00:00:000"
+
+[node name="Level" type="Label" parent="."]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 128.0
+offset_right = 114.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 25
+text = "Levels
+"
+label_settings = SubResource("LabelSettings_6ddnf")
+autowrap_mode = 2
+uppercase = true
+
+[node name="Time" type="Label" parent="."]
+layout_mode = 2
+offset_left = 136.0
+offset_top = 128.0
+offset_right = 303.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 25
+text = "Time
+"
+label_settings = SubResource("LabelSettings_liy5r")
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Lives" type="Label" parent="."]
+layout_mode = 2
+offset_left = 328.0
+offset_top = 128.0
+offset_right = 432.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 25
+text = "Respawns
+"
+label_settings = SubResource("LabelSettings_bfi20")
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
 
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/Try Again" to="." method="_on_try_again_pressed"]

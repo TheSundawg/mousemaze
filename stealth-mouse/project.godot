@@ -18,6 +18,7 @@ config/icon="res://Sprites/icon.svg"
 [autoload]
 
 GlobalEvents="*res://Scripts/GlobalEvents.gd"
+BgData="*res://Scripts/bg_data.gd"
 
 [display]
 

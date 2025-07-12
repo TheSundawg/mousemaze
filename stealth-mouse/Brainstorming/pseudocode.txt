@@ -1,0 +1,11 @@
+time: String
+lives: int
+Array1: array
+Array2: array
+
+signal passit(string, int)
+
+func()
+	string = string
+	int = int
+	Array1.append(string)

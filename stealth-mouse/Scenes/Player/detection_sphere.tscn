@@ -1,6 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4da8tq7x2fxb"]
+[gd_scene load_steps=11 format=3 uid="uid://c4da8tq7x2fxb"]
 
 [ext_resource type="Script" uid="uid://d20g2y0wcf56g" path="res://Scenes/Player/detection_sphere.gd" id="1_bcemi"]
+[ext_resource type="AudioStream" uid="uid://dytjfrfrdxf5y" path="res://Sounds/361230__someguy22__8-bit-bounce.wav" id="2_7jpwb"]
+[ext_resource type="AudioStream" uid="uid://b1ewcajmhr0p5" path="res://Sounds/683828__user391915396__electromagnetic-pulse-sound.wav" id="3_oorak"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fgdrt"]
 radius = 8.0
@@ -144,6 +146,14 @@ mesh = SubResource("SphereMesh_fgdrt")
 libraries = {
 &"": SubResource("AnimationLibrary_oorak")
 }
+
+[node name="Pulse" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource("2_7jpwb")
+pitch_scale = 0.6
+
+[node name="Sonar" type="AudioStreamPlayer" parent="AnimationPlayer"]
+stream = ExtResource("3_oorak")
+volume_db = 11.243
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]

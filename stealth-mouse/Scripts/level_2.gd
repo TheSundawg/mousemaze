@@ -2,20 +2,20 @@ extends Node2D
 
 # Global Events
 # Global Variables
+var score: String
 var exit = false
 var pulsible: bool
 var wall_anim: AnimationPlayer
 var wall_array: Array
 var wall_instance: Area2D
-var lives_left = 3
-
 var prev_level = "res://Levels/Level1.tscn"
 var this_level = "res://Levels/Level2.tscn"
 var next_level = "res://Levels/Level3.tscn"
+var lives_left: int
 
 func _ready():
 	var spawn = $spawn_pos.position
-	$Score.visible = false
+	lives_left = 3
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	get_viewport().warp_mouse(spawn)
@@ -24,6 +24,7 @@ func _ready():
 	GlobalEvents.pass_timer_time.connect(_on_pass_timer_time)
 	GlobalEvents.exit_level.connect(_on_exit_level)
 	GlobalEvents.can_pulse.connect(_on_can_pulse)
+	BgData.print_level.connect(_on_print_level)
 
 # Input Related Functions
 func _quit_game():
@@ -61,11 +62,15 @@ func _on_area_entered(area, mouse):
 		$Exit/AnimationPlayer.play("pulse")
 	elif exit == true:
 		return
-	elif lives_left == -1:
-		get_tree().change_scene_to_file(prev_level)
+	elif lives_left == -2:
+		get_tree().change_scene_to_file(this_level)
 	else:
 		lives_left -= 1
+		print(lives_left)
+		$cursor/AnimationPlayer.play("dead")
 		get_viewport().warp_mouse(spawn)
+		$Dead.play()
+
 
 func _on_pass_timer_time(stringy):
 	$Score/TimeScore.text = stringy
@@ -77,9 +82,31 @@ func _on_exit_level(area, mouse):
 		$Score.visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 		GlobalEvents.pass_levels.emit(this_level, next_level)
+		BgData.level_data.emit($Score/TimeScore.text,lives_left,"Level 2")
+		$"cursor/DeathBox".process_mode = Node.PROCESS_MODE_DISABLED
+		$Music.stop()
+		$ExitMusic.play()
 
+func _on_print_level(time, lives, names):
+	print(time)
+	print(lives)
+	print(names)
+	for x in time:
+		$Score/Time.text += "\n" +  x
+	for x in lives:
+		$Score/Lives.text += "\n" +  str(x)
+	for x in names:
+		$Score/Level.text += "\n" + x
 	
-func _process(float):
+
+func _process(_float):
 	_quit_game()
 	_sprite_cursor()
 	_detection_sphere()
+
+func _on_music_finished() -> void:
+	$Music.play()
+
+
+func _on_exit_music_finished() -> void:
+	$ExitMusic.play()

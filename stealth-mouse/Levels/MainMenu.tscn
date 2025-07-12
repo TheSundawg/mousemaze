@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddpdrhw11n4cv"]
+[gd_scene load_steps=6 format=3 uid="uid://ddpdrhw11n4cv"]
 
 [ext_resource type="Script" uid="uid://ix6eh1p6u35i" path="res://Levels/main_menu.gd" id="1_h7a2f"]
-[ext_resource type="Texture2D" uid="uid://cmr1o1akt527p" path="res://Sprites/StartIcon.svg" id="2_qoqlk"]
-[ext_resource type="Texture2D" uid="uid://bwnup4t2wks11" path="res://Sprites/QuitIcon.svg" id="3_iwfq2"]
+[ext_resource type="FontFile" uid="uid://byc5ev6pl45gw" path="res://Fonts/PixelSplitter-Bold.ttf" id="2_hr4vk"]
+[ext_resource type="FontFile" uid="uid://beory3n4qpt4b" path="res://Fonts/Blockstepped.ttf" id="3_2k6u6"]
+[ext_resource type="AudioStream" uid="uid://dqwhjerqt1acb" path="res://Sounds/168178__afleetingspeck__got-that-beat-haa-loop.wav" id="4_65ows"]
+
+[sub_resource type="Environment" id="Environment_yw2i3"]
+background_mode = 3
+glow_enabled = true
+glow_blend_mode = 1
+glow_hdr_threshold = 0.0
+glow_hdr_scale = 1.0
+glow_hdr_luminance_cap = 256.0
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,22 +28,69 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
-[node name="VSplitContainer" type="VSplitContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 264.0
-offset_right = 1008.0
-offset_bottom = 1372.0
-scale = Vector2(0.316224, 0.320066)
+offset_left = 128.0
+offset_top = 320.0
+offset_right = 230.0
+offset_bottom = 450.0
 
-[node name="Start" type="Button" parent="VSplitContainer"]
+[node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("2_qoqlk")
+theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_hr4vk")
+theme_override_font_sizes/font_size = 40
+text = "Start"
+flat = true
 icon_alignment = 1
 
-[node name="Quit" type="Button" parent="VSplitContainer"]
+[node name="Levels" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("3_iwfq2")
+theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_hr4vk")
+theme_override_font_sizes/font_size = 40
+text = "Levels"
+flat = true
+icon_alignment = 1
 
-[connection signal="pressed" from="VSplitContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VSplitContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_hr4vk")
+theme_override_font_sizes/font_size = 40
+text = "Options"
+flat = true
+icon_alignment = 1
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_hr4vk")
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+flat = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yw2i3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 80.0
+offset_right = 1152.0
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_2k6u6")
+theme_override_font_sizes/font_size = 73
+text = "MOUSEMAZER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_65ows")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="finished" from="MainMusic" to="." method="_on_audio_stream_player_finished"]
