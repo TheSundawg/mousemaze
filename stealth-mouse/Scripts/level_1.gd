@@ -12,10 +12,13 @@ var prev_level = "res://Levels/MainMenu.tscn"
 var this_level = "res://Levels/Level1.tscn"
 var next_level = "res://Levels/Level2.tscn"
 var lives_left: int
+var music: bool
 
 func _ready():
 	var spawn = $spawn_pos.position
 	lives_left = 0
+	
+	$Music.play()
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	get_viewport().warp_mouse(spawn)
@@ -25,7 +28,10 @@ func _ready():
 	GlobalEvents.exit_level.connect(_on_exit_level)
 	GlobalEvents.can_pulse.connect(_on_can_pulse)
 	BgData.print_level.connect(_on_print_level)
+	BgData.volume.connect(_on_volume)
 
+func _on_volume(toggled):
+	music = toggled
 # Input Related Functions
 func _quit_game():
 	if Input.is_action_pressed("quit"):

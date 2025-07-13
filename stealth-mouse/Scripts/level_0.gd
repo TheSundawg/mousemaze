@@ -12,6 +12,7 @@ var prev_level = "res://Levels/MainMenu.tscn"
 var this_level = "res://Levels/Level0.tscn"
 var next_level = "res://Levels/Level1.tscn"
 var lives_left: int
+var music: bool
 
 
 # Input Related Functions
@@ -75,9 +76,12 @@ func _on_exit_level(area, mouse):
 		$"cursor/DeathBox".process_mode = Node.PROCESS_MODE_DISABLED
 		$Music.stop()
 		$ExitMusic.play()
+
 func _ready():
 	var spawn = $spawn_pos.position
 	lives_left = 3
+	$Music.play(0.0)
+	
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	get_viewport().warp_mouse(spawn)
@@ -86,7 +90,11 @@ func _ready():
 	GlobalEvents.pass_timer_time.connect(_on_pass_timer_time)
 	GlobalEvents.exit_level.connect(_on_exit_level)
 	GlobalEvents.can_pulse.connect(_on_can_pulse)
-	
+	BgData.volume.connect(_on_volume)
+
+func _on_volume(toggled):
+	music = toggled
+
 func _process(_float):
 	_quit_game()
 	_sprite_cursor()

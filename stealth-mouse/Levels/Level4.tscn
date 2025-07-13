@@ -1689,7 +1689,6 @@ visible = false
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_v72e1")
-autoplay = true
 playback_type = 1
 
 [node name="ExitMusic" type="AudioStreamPlayer" parent="."]

@@ -8,6 +8,7 @@ var name_array: Array
 
 signal level_data(time: String, lives: int, level_name: String)
 signal print_level(time: Array, lives: Array, names: Array)
+signal volume(toggled: bool)
 
 func _ready() -> void:
 	BgData.level_data.connect(_on_level_data)

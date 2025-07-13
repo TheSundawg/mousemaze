@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddpdrhw11n4cv"]
+[gd_scene load_steps=9 format=3 uid="uid://ddpdrhw11n4cv"]
 
 [ext_resource type="Script" uid="uid://ix6eh1p6u35i" path="res://Levels/main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://byc5ev6pl45gw" path="res://Fonts/PixelSplitter-Bold.ttf" id="2_hr4vk"]
 [ext_resource type="FontFile" uid="uid://beory3n4qpt4b" path="res://Fonts/Blockstepped.ttf" id="3_2k6u6"]
+[ext_resource type="Texture2D" uid="uid://c2dlyqvhd72ts" path="res://Sprites/play.png" id="3_gerv3"]
+[ext_resource type="Texture2D" uid="uid://cihrcdgkvnw2p" path="res://Sprites/Quit.png" id="4_17ajd"]
 [ext_resource type="AudioStream" uid="uid://dqwhjerqt1acb" path="res://Sounds/168178__afleetingspeck__got-that-beat-haa-loop.wav" id="4_65ows"]
+[ext_resource type="FontFile" uid="uid://b61t35i38ddok" path="res://Fonts/plasmati.ttf" id="5_2ld8x"]
 
 [sub_resource type="Environment" id="Environment_yw2i3"]
 background_mode = 3
@@ -28,46 +31,31 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 128.0
+[node name="Start" type="Button" parent="."]
+layout_mode = 2
+offset_left = 296.0
 offset_top = 320.0
-offset_right = 230.0
-offset_bottom = 450.0
-
-[node name="Start" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+offset_right = 464.0
+offset_bottom = 488.0
+scale = Vector2(0.760473, 0.760473)
 theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_hr4vk")
 theme_override_font_sizes/font_size = 40
-text = "Start"
+icon = ExtResource("3_gerv3")
 flat = true
 icon_alignment = 1
 
-[node name="Levels" type="Button" parent="VBoxContainer"]
+[node name="Quit" type="Button" parent="."]
 layout_mode = 2
+offset_left = 728.0
+offset_top = 320.0
+offset_right = 896.0
+offset_bottom = 488.0
+scale = Vector2(0.767953, 0.767953)
 theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_hr4vk")
 theme_override_font_sizes/font_size = 40
-text = "Levels"
-flat = true
-icon_alignment = 1
-
-[node name="Options" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_hr4vk")
-theme_override_font_sizes/font_size = 40
-text = "Options"
-flat = true
-icon_alignment = 1
-
-[node name="Quit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_hr4vk")
-theme_override_font_sizes/font_size = 40
-text = "Quit"
+icon = ExtResource("4_17ajd")
 flat = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -89,8 +77,19 @@ vertical_alignment = 1
 stream = ExtResource("4_65ows")
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Levels" to="." method="_on_levels_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Fullscreen" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 224.0
+offset_right = 647.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_2ld8x")
+theme_override_font_sizes/font_size = 20
+button_pressed = true
+text = "Fullscreen"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="finished" from="MainMusic" to="." method="_on_audio_stream_player_finished"]
+[connection signal="toggled" from="Fullscreen" to="." method="_on_fullscreen_toggled"]

@@ -13,9 +13,13 @@ var this_level = "res://Levels/Level3.tscn"
 var next_level = "res://Levels/Level4.tscn"
 var lives_left: int
 
+var music: bool
+
 func _ready():
 	var spawn = $spawn_pos.position
-	lives_left = 3
+	lives_left = 0
+	
+	$Music.play()
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	get_viewport().warp_mouse(spawn)
@@ -25,7 +29,10 @@ func _ready():
 	GlobalEvents.exit_level.connect(_on_exit_level)
 	GlobalEvents.can_pulse.connect(_on_can_pulse)
 	BgData.print_level.connect(_on_print_level)
+	BgData.volume.connect(_on_volume)
 
+func _on_volume(toggled):
+	music = toggled
 # Input Related Functions
 func _quit_game():
 	if Input.is_action_pressed("quit"):
@@ -33,7 +40,6 @@ func _quit_game():
 
 func _on_can_pulse(boolean):
 	pulsible = boolean
-	
 
 func _detection_sphere():
 	var mouse_pos = get_global_mouse_position()
@@ -62,15 +68,12 @@ func _on_area_entered(area, mouse):
 		$Exit/AnimationPlayer.play("pulse")
 	elif exit == true:
 		return
-	elif lives_left == -2:
-		get_tree().change_scene_to_file(this_level)
 	else:
-		lives_left -= 1
+		lives_left += 1
 		print(lives_left)
 		$cursor/AnimationPlayer.play("dead")
 		get_viewport().warp_mouse(spawn)
 		$Dead.play()
-
 
 func _on_pass_timer_time(stringy):
 	$Score/TimeScore.text = stringy
@@ -82,27 +85,26 @@ func _on_exit_level(area, mouse):
 		$Score.visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 		GlobalEvents.pass_levels.emit(this_level, next_level)
-		BgData.level_data.emit($Score/TimeScore.text,lives_left,"Level 3")
+		BgData.level_data.emit($Score/TimeScore.text,lives_left,"Level 1")
 		$"cursor/DeathBox".process_mode = Node.PROCESS_MODE_DISABLED
 		$Music.stop()
 		$ExitMusic.play()
 
 func _on_print_level(time, lives, names):
-	print(time)
-	print(lives)
-	print(names)
 	for x in time:
-		$Score/Time.text += "\n" +  x
+		$Score/Time.text += "\n" + x
 	for x in lives:
 		$Score/Lives.text += "\n" +  str(x)
 	for x in names:
-		$Score/Level.text += "\n" + x
+		$Score/Level.text += "\n" +  x
 	
 
 func _process(_float):
 	_quit_game()
 	_sprite_cursor()
 	_detection_sphere()
+	
+
 
 func _on_music_finished() -> void:
 	$Music.play()

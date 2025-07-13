@@ -4,13 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://bh7b7nt1l6wut" path="res://Scenes/Player/cursor.tscn" id="2_3anf8"]
 [ext_resource type="PackedScene" uid="uid://c4da8tq7x2fxb" path="res://Scenes/Player/detection_sphere.tscn" id="3_fhqol"]
 [ext_resource type="PackedScene" uid="uid://cub42feg15oas" path="res://Scenes/Environment/wall_1.tscn" id="4_iotdp"]
-[ext_resource type="FontFile" uid="uid://cbxucjnksoerc" path="res://Fonts/RosesareFF0000.ttf" id="5_5g41i"]
 [ext_resource type="PackedScene" uid="uid://47d3e7bgif64" path="res://Exit.tscn" id="5_nutv8"]
 [ext_resource type="PackedScene" uid="uid://dt2y86l3hlkwe" path="res://Scenes/Environment/stopwatch.tscn" id="6_05pb0"]
 [ext_resource type="PackedScene" uid="uid://2ak12mg4a86m" path="res://Scoreboard.tscn" id="7_dl8mf"]
 [ext_resource type="Texture2D" uid="uid://sku3j02wkty0" path="res://Sprites/heart.png" id="8_xcayt"]
 [ext_resource type="AudioStream" uid="uid://botsbbpjmirte" path="res://Sounds/396792__ghostsyndicate__gs_free1_172_perc_01.wav" id="10_7fl83"]
 [ext_resource type="AudioStream" uid="uid://cm08e2ujufijm" path="res://Sounds/132507__daza303__silverbox-vst-acid-loop1-32-bit-96000khz.wav" id="11_p5226"]
+[ext_resource type="Texture2D" uid="uid://cj0s7bqmes20y" path="res://Sprites/NoWalls.png" id="12_f5cpa"]
 [ext_resource type="AudioStream" uid="uid://rchntkatpdjj" path="res://Sounds/386862__profmudkip__8-bit-explosion.wav" id="12_tuji2"]
 
 [sub_resource type="Environment" id="Environment_xcayt"]
@@ -35,15 +35,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="Exit" parent="." instance=ExtResource("5_nutv8")]
 position = Vector2(512, 192)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 216.0
-offset_top = 24.0
-offset_right = 432.0
-offset_bottom = 248.0
-theme_override_fonts/normal_font = ExtResource("5_5g41i")
-theme_override_font_sizes/normal_font_size = 21
-text = "Hitting the walls will reset you to the beginning of the level."
 
 [node name="Stopwatch" parent="." instance=ExtResource("6_05pb0")]
 position = Vector2(496, 0)
@@ -593,7 +584,6 @@ environment = SubResource("Environment_xcayt")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_7fl83")
-autoplay = true
 playback_type = 1
 
 [node name="ExitMusic" type="AudioStreamPlayer" parent="."]
@@ -601,6 +591,11 @@ stream = ExtResource("11_p5226")
 
 [node name="Dead" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_tuji2")
+
+[node name="NoWalls" type="Sprite2D" parent="."]
+position = Vector2(264, 64)
+scale = Vector2(1.16667, 1.16667)
+texture = ExtResource("12_f5cpa")
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="finished" from="ExitMusic" to="." method="_on_exit_music_finished"]
