@@ -1,9 +1,32 @@
 extends Control
 
+var file: FileAccess
+const save_location = "user://SaveFile.tres"
+var save_file: SaveDataResource
+var names: Array
+var time: Array
+var lives: Array
+
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	BgData.volume.emit()
+	_load()
+	
 
+func _load():
+	if FileAccess.file_exists(save_location):
+		save_file = ResourceLoader.load(save_location).duplicate(true)
+		names = save_file.name_array
+		time = save_file.time_array
+		lives = save_file.lives_array
+		print(names + time + lives)
+		
+		for x in time:
+			$Score/Time.text += "\n" + x
+		for x in lives:
+			$Score/Lives.text += "\n" +  str(x)
+		for x in names:
+			$Score/Level.text += "\n" +  x
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://Levels/Level0.tscn")

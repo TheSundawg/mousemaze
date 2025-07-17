@@ -43,8 +43,13 @@ position = Vector2(496, 0)
 offset_right = 40.0
 offset_bottom = 23.0
 
+[node name="NoWalls" type="Sprite2D" parent="."]
+position = Vector2(264, 104)
+scale = Vector2(1.16667, 1.16667)
+texture = ExtResource("12_f5cpa")
+
 [node name="spawn_pos" type="Node2D" parent="."]
-position = Vector2(64, 64)
+position = Vector2(88, 72)
 
 [node name="Walls" type="Node" parent="."]
 
@@ -77,6 +82,36 @@ position = Vector2(80, 128)
 
 [node name="Wall_12" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
 position = Vector2(64, 128)
+
+[node name="Wall_135" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(64, 0)
+
+[node name="Wall_136" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(48, 0)
+
+[node name="Wall_176" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(32, 0)
+
+[node name="Wall_177" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(16, 0)
+
+[node name="Wall_181" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(96, 0)
+
+[node name="Wall_182" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(80, 0)
+
+[node name="Wall_183" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(160, 0)
+
+[node name="Wall_184" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(144, 0)
+
+[node name="Wall_185" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(128, 0)
+
+[node name="Wall_186" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(112, 0)
 
 [node name="Wall_63" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
 position = Vector2(144, 544)
@@ -183,6 +218,29 @@ position = Vector2(176, 80)
 [node name="Wall_16" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
 position = Vector2(176, 64)
 
+[node name="Wall_51" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(0, 48)
+
+[node name="Wall_52" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(0, 32)
+
+[node name="Wall_53" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(0, 16)
+
+[node name="Wall_93" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+
+[node name="Wall_94" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(0, 112)
+
+[node name="Wall_112" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(0, 96)
+
+[node name="Wall_116" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(0, 80)
+
+[node name="Wall_117" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(0, 64)
+
 [node name="Wall_17" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
 position = Vector2(176, 176)
 
@@ -266,6 +324,33 @@ position = Vector2(176, 272)
 
 [node name="Wall_42" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
 position = Vector2(176, 256)
+
+[node name="Wall_188" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(96, 256)
+
+[node name="Wall_189" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(112, 256)
+
+[node name="Wall_190" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(128, 256)
+
+[node name="Wall_191" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(128, 352)
+
+[node name="Wall_192" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(144, 352)
+
+[node name="Wall_193" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(160, 352)
+
+[node name="Wall_194" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(96, 448)
+
+[node name="Wall_195" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(112, 448)
+
+[node name="Wall_196" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
+position = Vector2(128, 448)
 
 [node name="Wall_43" parent="Walls" groups=["Walls"] instance=ExtResource("4_iotdp")]
 position = Vector2(176, 368)
@@ -591,11 +676,6 @@ stream = ExtResource("11_p5226")
 
 [node name="Dead" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_tuji2")
-
-[node name="NoWalls" type="Sprite2D" parent="."]
-position = Vector2(264, 64)
-scale = Vector2(1.16667, 1.16667)
-texture = ExtResource("12_f5cpa")
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="finished" from="ExitMusic" to="." method="_on_exit_music_finished"]

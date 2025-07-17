@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddpdrhw11n4cv"]
+[gd_scene load_steps=13 format=3 uid="uid://ddpdrhw11n4cv"]
 
 [ext_resource type="Script" uid="uid://ix6eh1p6u35i" path="res://Levels/main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://byc5ev6pl45gw" path="res://Fonts/PixelSplitter-Bold.ttf" id="2_hr4vk"]
@@ -15,6 +15,28 @@ glow_blend_mode = 1
 glow_hdr_threshold = 0.0
 glow_hdr_scale = 1.0
 glow_hdr_luminance_cap = 256.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_uty7f"]
+font = ExtResource("2_hr4vk")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_gerv3"]
+font = ExtResource("5_2ld8x")
+font_size = 25
+outline_size = 1
+outline_color = Color(0, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_17ajd"]
+font = ExtResource("5_2ld8x")
+font_size = 25
+outline_size = 1
+outline_color = Color(0, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xun1b"]
+font = ExtResource("5_2ld8x")
+font_size = 25
+outline_size = 1
+outline_color = Color(0, 1, 1, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -33,9 +55,9 @@ color = Color(0, 0, 0, 1)
 
 [node name="Start" type="Button" parent="."]
 layout_mode = 2
-offset_left = 296.0
+offset_left = 128.0
 offset_top = 320.0
-offset_right = 464.0
+offset_right = 296.0
 offset_bottom = 488.0
 scale = Vector2(0.760473, 0.760473)
 theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
@@ -47,9 +69,9 @@ icon_alignment = 1
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 2
-offset_left = 728.0
+offset_left = 384.0
 offset_top = 320.0
-offset_right = 896.0
+offset_right = 552.0
 offset_bottom = 488.0
 scale = Vector2(0.767953, 0.767953)
 theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
@@ -64,7 +86,7 @@ environment = SubResource("Environment_yw2i3")
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_top = 80.0
-offset_right = 1152.0
+offset_right = 696.0
 offset_bottom = 231.0
 theme_override_colors/font_color = Color(0.305882, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_2k6u6")
@@ -79,15 +101,79 @@ autoplay = true
 
 [node name="Fullscreen" type="CheckButton" parent="."]
 layout_mode = 0
-offset_left = 496.0
+offset_left = 248.0
 offset_top = 224.0
-offset_right = 647.0
+offset_right = 399.0
 offset_bottom = 256.0
 theme_override_colors/font_color = Color(0, 1, 1, 1)
 theme_override_fonts/font = ExtResource("5_2ld8x")
 theme_override_font_sizes/font_size = 20
 button_pressed = true
 text = "Fullscreen"
+
+[node name="Score" type="Node" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="Score"]
+anchors_preset = -1
+anchor_left = -0.0416667
+offset_left = 688.0
+offset_top = 208.0
+offset_right = 1112.0
+offset_bottom = 608.0
+scale = Vector2(1.00332, 1.01028)
+color = Color(0.0768358, 0.0768358, 0.0768358, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Most Recent" type="Label" parent="Score"]
+offset_left = 688.0
+offset_top = 168.0
+offset_right = 1112.0
+offset_bottom = 204.0
+text = "Most Recent Run"
+label_settings = SubResource("LabelSettings_uty7f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Score"]
+offset_left = 656.0
+offset_top = 216.0
+offset_right = 746.0
+offset_bottom = 600.0
+scale = Vector2(1.00332, 1.01028)
+theme_override_font_sizes/font_size = 25
+text = "Levels
+"
+label_settings = SubResource("LabelSettings_gerv3")
+autowrap_mode = 2
+uppercase = true
+
+[node name="Time" type="Label" parent="Score"]
+offset_left = 784.0
+offset_top = 216.0
+offset_right = 951.0
+offset_bottom = 600.0
+scale = Vector2(1.00332, 1.01028)
+theme_override_font_sizes/font_size = 25
+text = "Time
+"
+label_settings = SubResource("LabelSettings_17ajd")
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Lives" type="Label" parent="Score"]
+offset_left = 992.0
+offset_top = 216.0
+offset_right = 1096.0
+offset_bottom = 600.0
+scale = Vector2(1.00332, 1.01028)
+theme_override_font_sizes/font_size = 25
+text = "Respawns
+"
+label_settings = SubResource("LabelSettings_xun1b")
+horizontal_alignment = 1
+autowrap_mode = 2
+uppercase = true
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

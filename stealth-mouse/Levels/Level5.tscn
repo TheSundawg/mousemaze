@@ -1,0 +1,2477 @@
+[gd_scene load_steps=12 format=3 uid="uid://cifp5ujq83h5i"]
+
+[ext_resource type="Script" uid="uid://bj76gx0hshwd2" path="res://Scripts/level_5.gd" id="1_nijbd"]
+[ext_resource type="PackedScene" uid="uid://bh7b7nt1l6wut" path="res://Scenes/Player/cursor.tscn" id="2_cg4ff"]
+[ext_resource type="PackedScene" uid="uid://c4da8tq7x2fxb" path="res://Scenes/Player/detection_sphere.tscn" id="3_rss6v"]
+[ext_resource type="PackedScene" uid="uid://47d3e7bgif64" path="res://Exit.tscn" id="4_x1euj"]
+[ext_resource type="PackedScene" uid="uid://cub42feg15oas" path="res://Scenes/Environment/wall_1.tscn" id="6_888os"]
+[ext_resource type="PackedScene" uid="uid://2ak12mg4a86m" path="res://Scoreboard.tscn" id="7_nxrld"]
+[ext_resource type="PackedScene" uid="uid://dt2y86l3hlkwe" path="res://Scenes/Environment/stopwatch.tscn" id="8_cg4ff"]
+[ext_resource type="AudioStream" uid="uid://botsbbpjmirte" path="res://Sounds/396792__ghostsyndicate__gs_free1_172_perc_01.wav" id="8_ycmcf"]
+[ext_resource type="AudioStream" uid="uid://cm08e2ujufijm" path="res://Sounds/132507__daza303__silverbox-vst-acid-loop1-32-bit-96000khz.wav" id="9_l2wws"]
+[ext_resource type="Texture2D" uid="uid://bv2r66q0hj0eg" path="res://Sprites/Level 5.png" id="9_nijbd"]
+[ext_resource type="AudioStream" uid="uid://rchntkatpdjj" path="res://Sounds/386862__profmudkip__8-bit-explosion.wav" id="10_7wtyh"]
+
+[node name="Level" type="Node2D" groups=["Levels", "Walls"]]
+script = ExtResource("1_nijbd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Level5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 325)
+scale = Vector2(1.2, 1.1963)
+texture = ExtResource("9_nijbd")
+
+[node name="cursor" parent="." instance=ExtResource("2_cg4ff")]
+
+[node name="detection" parent="." instance=ExtResource("3_rss6v")]
+
+[node name="Exit" parent="." instance=ExtResource("4_x1euj")]
+position = Vector2(528, 288)
+scale = Vector2(0.630947, 0.630947)
+
+[node name="spawn_pos" type="Node2D" parent="."]
+position = Vector2(40, 600)
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall_1" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 544)
+
+[node name="Wall_2" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 544)
+
+[node name="Wall_3" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(48, 544)
+
+[node name="Wall_4" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(64, 544)
+
+[node name="Wall_5" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 544)
+
+[node name="Wall_6" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 560)
+
+[node name="Wall_7" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 576)
+
+[node name="Wall_8" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 592)
+
+[node name="Wall_9" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 608)
+
+[node name="Wall_10" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 624)
+
+[node name="Wall_13" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(64, 624)
+
+[node name="Wall_14" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(48, 624)
+
+[node name="Wall_15" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(32, 624)
+
+[node name="Wall_16" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 624)
+
+[node name="Wall_17" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 624)
+
+[node name="Wall_18" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 608)
+
+[node name="Wall_19" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 592)
+
+[node name="Wall_20" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 576)
+
+[node name="Wall_21" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 560)
+
+[node name="Wall_11" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 624)
+
+[node name="Wall_12" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 624)
+
+[node name="Wall_22" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(208, 624)
+
+[node name="Wall_23" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(192, 624)
+
+[node name="Wall_24" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(176, 624)
+
+[node name="Wall_25" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(160, 624)
+
+[node name="Wall_26" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(144, 624)
+
+[node name="Wall_27" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(128, 624)
+
+[node name="Wall_28" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(128, 576)
+
+[node name="Wall_29" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(224, 624)
+
+[node name="Wall_30" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(240, 624)
+
+[node name="Wall_31" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 624)
+
+[node name="Wall_32" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 624)
+
+[node name="Wall_33" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(304, 624)
+
+[node name="Wall_34" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(288, 624)
+
+[node name="Wall_35" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(272, 624)
+
+[node name="Wall_36" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(256, 624)
+
+[node name="Wall_289" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(208, 576)
+
+[node name="Wall_290" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(192, 576)
+
+[node name="Wall_391" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(176, 576)
+
+[node name="Wall_590" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(176, 560)
+
+[node name="Wall_591" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(176, 544)
+
+[node name="Wall_592" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(176, 528)
+
+[node name="Wall_593" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(176, 512)
+
+[node name="Wall_594" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(176, 496)
+
+[node name="Wall_798" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(160, 496)
+
+[node name="Wall_799" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(144, 496)
+
+[node name="Wall_800" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(128, 496)
+
+[node name="Wall_801" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 496)
+
+[node name="Wall_802" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 496)
+
+[node name="Wall_803" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 496)
+
+[node name="Wall_804" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(64, 496)
+
+[node name="Wall_805" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(48, 496)
+
+[node name="Wall_806" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(32, 496)
+
+[node name="Wall_807" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 496)
+
+[node name="Wall_808" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 496)
+
+[node name="Wall_595" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(176, 480)
+
+[node name="Wall_596" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(160, 480)
+
+[node name="Wall_597" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(144, 480)
+
+[node name="Wall_598" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(128, 480)
+
+[node name="Wall_599" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 480)
+
+[node name="Wall_622" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 464)
+
+[node name="Wall_623" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 448)
+
+[node name="Wall_624" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 432)
+
+[node name="Wall_625" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 416)
+
+[node name="Wall_626" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 400)
+
+[node name="Wall_627" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 384)
+
+[node name="Wall_628" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 368)
+
+[node name="Wall_629" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 352)
+
+[node name="Wall_630" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 336)
+
+[node name="Wall_631" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 320)
+
+[node name="Wall_632" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 304)
+
+[node name="Wall_633" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 288)
+
+[node name="Wall_634" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 272)
+
+[node name="Wall_635" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 256)
+
+[node name="Wall_636" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 464)
+
+[node name="Wall_637" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 448)
+
+[node name="Wall_638" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 432)
+
+[node name="Wall_639" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 416)
+
+[node name="Wall_640" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 400)
+
+[node name="Wall_641" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 384)
+
+[node name="Wall_642" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 368)
+
+[node name="Wall_643" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 352)
+
+[node name="Wall_644" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 336)
+
+[node name="Wall_645" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 320)
+
+[node name="Wall_646" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 304)
+
+[node name="Wall_647" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 288)
+
+[node name="Wall_648" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 272)
+
+[node name="Wall_649" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 256)
+
+[node name="Wall_650" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 464)
+
+[node name="Wall_651" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 448)
+
+[node name="Wall_652" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 432)
+
+[node name="Wall_653" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 416)
+
+[node name="Wall_654" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 400)
+
+[node name="Wall_655" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 384)
+
+[node name="Wall_656" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 368)
+
+[node name="Wall_657" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 352)
+
+[node name="Wall_658" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 336)
+
+[node name="Wall_659" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 320)
+
+[node name="Wall_660" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 304)
+
+[node name="Wall_661" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 288)
+
+[node name="Wall_662" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 272)
+
+[node name="Wall_663" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 256)
+
+[node name="Wall_664" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 464)
+
+[node name="Wall_665" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 448)
+
+[node name="Wall_666" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 432)
+
+[node name="Wall_667" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 416)
+
+[node name="Wall_668" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 400)
+
+[node name="Wall_669" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 384)
+
+[node name="Wall_670" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 368)
+
+[node name="Wall_671" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 352)
+
+[node name="Wall_672" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 336)
+
+[node name="Wall_673" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 320)
+
+[node name="Wall_674" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 304)
+
+[node name="Wall_675" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 288)
+
+[node name="Wall_676" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 272)
+
+[node name="Wall_677" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 256)
+
+[node name="Wall_678" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 240)
+
+[node name="Wall_679" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 224)
+
+[node name="Wall_680" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 208)
+
+[node name="Wall_681" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 192)
+
+[node name="Wall_682" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 176)
+
+[node name="Wall_683" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 160)
+
+[node name="Wall_684" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 144)
+
+[node name="Wall_685" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 128)
+
+[node name="Wall_686" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 112)
+
+[node name="Wall_687" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 96)
+
+[node name="Wall_710" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(32, 112)
+
+[node name="Wall_711" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(32, 96)
+
+[node name="Wall_712" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(48, 112)
+
+[node name="Wall_713" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(48, 96)
+
+[node name="Wall_714" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(64, 112)
+
+[node name="Wall_715" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(64, 96)
+
+[node name="Wall_716" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 112)
+
+[node name="Wall_717" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 96)
+
+[node name="Wall_718" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 112)
+
+[node name="Wall_719" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 96)
+
+[node name="Wall_720" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 112)
+
+[node name="Wall_721" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(112, 96)
+
+[node name="Wall_722" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(128, 112)
+
+[node name="Wall_723" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(128, 96)
+
+[node name="Wall_724" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(144, 112)
+
+[node name="Wall_725" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(144, 96)
+
+[node name="Wall_726" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(160, 112)
+
+[node name="Wall_727" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(160, 96)
+
+[node name="Wall_688" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 80)
+
+[node name="Wall_689" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 64)
+
+[node name="Wall_690" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 48)
+
+[node name="Wall_691" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 32)
+
+[node name="Wall_692" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 240)
+
+[node name="Wall_693" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 224)
+
+[node name="Wall_694" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 208)
+
+[node name="Wall_695" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 192)
+
+[node name="Wall_696" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 176)
+
+[node name="Wall_697" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 160)
+
+[node name="Wall_698" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 144)
+
+[node name="Wall_699" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 128)
+
+[node name="Wall_700" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 112)
+
+[node name="Wall_701" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 96)
+
+[node name="Wall_702" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 80)
+
+[node name="Wall_703" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 64)
+
+[node name="Wall_704" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 48)
+
+[node name="Wall_705" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 32)
+
+[node name="Wall_706" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 16)
+
+[node name="Wall_707" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 0)
+
+[node name="Wall_708" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 16)
+
+[node name="Wall_709" parent="Walls" instance=ExtResource("6_888os")]
+
+[node name="Wall_600" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(96, 480)
+
+[node name="Wall_601" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(80, 480)
+
+[node name="Wall_602" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(64, 480)
+
+[node name="Wall_603" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(48, 480)
+
+[node name="Wall_604" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(32, 480)
+
+[node name="Wall_605" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(16, 480)
+
+[node name="Wall_606" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(0, 480)
+
+[node name="Wall_392" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(160, 576)
+
+[node name="Wall_393" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(144, 576)
+
+[node name="Wall_394" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(224, 576)
+
+[node name="Wall_395" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(240, 576)
+
+[node name="Wall_397" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(272, 576)
+
+[node name="Wall_398" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(256, 576)
+
+[node name="Wall_37" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 624)
+
+[node name="Wall_38" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 624)
+
+[node name="Wall_39" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 624)
+
+[node name="Wall_40" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 624)
+
+[node name="Wall_41" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 624)
+
+[node name="Wall_42" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 624)
+
+[node name="Wall_43" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 624)
+
+[node name="Wall_44" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 624)
+
+[node name="Wall_45" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 624)
+
+[node name="Wall_46" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 624)
+
+[node name="Wall_47" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 624)
+
+[node name="Wall_283" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 608)
+
+[node name="Wall_284" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 592)
+
+[node name="Wall_285" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 576)
+
+[node name="Wall_286" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 560)
+
+[node name="Wall_287" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 544)
+
+[node name="Wall_389" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 528)
+
+[node name="Wall_390" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 512)
+
+[node name="Wall_288" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 608)
+
+[node name="Wall_291" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 560)
+
+[node name="Wall_292" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 544)
+
+[node name="Wall_565" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 544)
+
+[node name="Wall_575" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 544)
+
+[node name="Wall_566" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 544)
+
+[node name="Wall_567" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 528)
+
+[node name="Wall_568" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 528)
+
+[node name="Wall_569" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 528)
+
+[node name="Wall_570" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 512)
+
+[node name="Wall_571" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 512)
+
+[node name="Wall_572" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 512)
+
+[node name="Wall_573" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 496)
+
+[node name="Wall_574" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 496)
+
+[node name="Wall_576" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(776, 464)
+
+[node name="Wall_577" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(792, 464)
+
+[node name="Wall_578" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(792, 448)
+
+[node name="Wall_579" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(808, 448)
+
+[node name="Wall_580" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(808, 432)
+
+[node name="Wall_581" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(824, 432)
+
+[node name="Wall_582" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(824, 416)
+
+[node name="Wall_583" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(824, 400)
+
+[node name="Wall_584" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(840, 400)
+
+[node name="Wall_585" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(840, 384)
+
+[node name="Wall_586" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(840, 368)
+
+[node name="Wall_587" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(856, 368)
+
+[node name="Wall_588" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(856, 352)
+
+[node name="Wall_589" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(856, 336)
+
+[node name="Wall_293" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 528)
+
+[node name="Wall_294" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 512)
+
+[node name="Wall_295" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 496)
+
+[node name="Wall_296" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 480)
+
+[node name="Wall_542" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 480)
+
+[node name="Wall_543" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(640, 480)
+
+[node name="Wall_544" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 480)
+
+[node name="Wall_545" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 480)
+
+[node name="Wall_546" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 464)
+
+[node name="Wall_547" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 464)
+
+[node name="Wall_548" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 464)
+
+[node name="Wall_549" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 448)
+
+[node name="Wall_550" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 448)
+
+[node name="Wall_551" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 432)
+
+[node name="Wall_552" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 432)
+
+[node name="Wall_553" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 416)
+
+[node name="Wall_554" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 416)
+
+[node name="Wall_555" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 400)
+
+[node name="Wall_556" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(768, 400)
+
+[node name="Wall_557" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(768, 384)
+
+[node name="Wall_558" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 384)
+
+[node name="Wall_559" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 368)
+
+[node name="Wall_560" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 352)
+
+[node name="Wall_561" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(800, 352)
+
+[node name="Wall_562" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(800, 336)
+
+[node name="Wall_563" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(800, 320)
+
+[node name="Wall_564" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(800, 304)
+
+[node name="Wall_297" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 464)
+
+[node name="Wall_298" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 448)
+
+[node name="Wall_299" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 432)
+
+[node name="Wall_300" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 496)
+
+[node name="Wall_301" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(544, 496)
+
+[node name="Wall_302" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(528, 496)
+
+[node name="Wall_303" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 480)
+
+[node name="Wall_304" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 496)
+
+[node name="Wall_305" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 480)
+
+[node name="Wall_306" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 480)
+
+[node name="Wall_307" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 480)
+
+[node name="Wall_308" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 464)
+
+[node name="Wall_309" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 464)
+
+[node name="Wall_310" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 464)
+
+[node name="Wall_311" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 464)
+
+[node name="Wall_312" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 448)
+
+[node name="Wall_313" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 448)
+
+[node name="Wall_314" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 432)
+
+[node name="Wall_315" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 432)
+
+[node name="Wall_316" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 416)
+
+[node name="Wall_317" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 416)
+
+[node name="Wall_318" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 400)
+
+[node name="Wall_319" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 400)
+
+[node name="Wall_320" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 384)
+
+[node name="Wall_321" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 384)
+
+[node name="Wall_322" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 368)
+
+[node name="Wall_323" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 352)
+
+[node name="Wall_324" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 352)
+
+[node name="Wall_325" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 336)
+
+[node name="Wall_326" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 320)
+
+[node name="Wall_327" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 304)
+
+[node name="Wall_328" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 288)
+
+[node name="Wall_329" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 288)
+
+[node name="Wall_330" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 272)
+
+[node name="Wall_331" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 256)
+
+[node name="Wall_332" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 256)
+
+[node name="Wall_333" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 240)
+
+[node name="Wall_334" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 224)
+
+[node name="Wall_335" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 224)
+
+[node name="Wall_336" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 208)
+
+[node name="Wall_337" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 208)
+
+[node name="Wall_338" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 192)
+
+[node name="Wall_339" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 192)
+
+[node name="Wall_340" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 176)
+
+[node name="Wall_341" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 176)
+
+[node name="Wall_342" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 176)
+
+[node name="Wall_343" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 160)
+
+[node name="Wall_344" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 160)
+
+[node name="Wall_345" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 160)
+
+[node name="Wall_346" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 144)
+
+[node name="Wall_347" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 144)
+
+[node name="Wall_348" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 144)
+
+[node name="Wall_349" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 128)
+
+[node name="Wall_350" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 128)
+
+[node name="Wall_351" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(528, 128)
+
+[node name="Wall_352" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(544, 128)
+
+[node name="Wall_353" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 128)
+
+[node name="Wall_354" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 128)
+
+[node name="Wall_412" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 144)
+
+[node name="Wall_416" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 144)
+
+[node name="Wall_417" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(640, 144)
+
+[node name="Wall_418" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 144)
+
+[node name="Wall_419" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 160)
+
+[node name="Wall_420" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 160)
+
+[node name="Wall_421" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 160)
+
+[node name="Wall_422" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 176)
+
+[node name="Wall_423" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 176)
+
+[node name="Wall_424" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 176)
+
+[node name="Wall_425" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 192)
+
+[node name="Wall_426" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 192)
+
+[node name="Wall_427" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 208)
+
+[node name="Wall_428" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 208)
+
+[node name="Wall_429" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 224)
+
+[node name="Wall_430" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(768, 224)
+
+[node name="Wall_431" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(768, 240)
+
+[node name="Wall_432" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 240)
+
+[node name="Wall_413" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 160)
+
+[node name="Wall_414" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 176)
+
+[node name="Wall_415" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 192)
+
+[node name="Wall_489" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(592, 192)
+
+[node name="Wall_491" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 192)
+
+[node name="Wall_490" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 208)
+
+[node name="Wall_492" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 208)
+
+[node name="Wall_493" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(640, 208)
+
+[node name="Wall_494" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 208)
+
+[node name="Wall_495" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 224)
+
+[node name="Wall_496" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 224)
+
+[node name="Wall_497" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 224)
+
+[node name="Wall_498" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 240)
+
+[node name="Wall_499" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 240)
+
+[node name="Wall_501" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 256)
+
+[node name="Wall_502" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 256)
+
+[node name="Wall_503" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 272)
+
+[node name="Wall_504" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 272)
+
+[node name="Wall_48" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(544, 624)
+
+[node name="Wall_49" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(528, 624)
+
+[node name="Wall_50" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 624)
+
+[node name="Wall_51" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 624)
+
+[node name="Wall_52" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(592, 624)
+
+[node name="Wall_53" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 624)
+
+[node name="Wall_54" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 624)
+
+[node name="Wall_55" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(640, 624)
+
+[node name="Wall_56" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 624)
+
+[node name="Wall_57" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 624)
+
+[node name="Wall_58" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 608)
+
+[node name="Wall_59" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 608)
+
+[node name="Wall_60" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 608)
+
+[node name="Wall_61" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 608)
+
+[node name="Wall_62" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 592)
+
+[node name="Wall_63" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 592)
+
+[node name="Wall_64" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 592)
+
+[node name="Wall_65" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 576)
+
+[node name="Wall_66" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(768, 576)
+
+[node name="Wall_67" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 576)
+
+[node name="Wall_68" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 560)
+
+[node name="Wall_69" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(800, 560)
+
+[node name="Wall_70" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(816, 560)
+
+[node name="Wall_71" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(816, 544)
+
+[node name="Wall_72" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(832, 544)
+
+[node name="Wall_73" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(832, 528)
+
+[node name="Wall_74" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(848, 528)
+
+[node name="Wall_75" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(848, 512)
+
+[node name="Wall_76" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(864, 512)
+
+[node name="Wall_77" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(864, 496)
+
+[node name="Wall_78" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(880, 496)
+
+[node name="Wall_79" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(880, 480)
+
+[node name="Wall_80" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(896, 480)
+
+[node name="Wall_81" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(896, 464)
+
+[node name="Wall_82" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(912, 464)
+
+[node name="Wall_83" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(912, 448)
+
+[node name="Wall_84" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(912, 432)
+
+[node name="Wall_85" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(928, 432)
+
+[node name="Wall_86" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(928, 416)
+
+[node name="Wall_87" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(928, 400)
+
+[node name="Wall_88" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 400)
+
+[node name="Wall_89" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 384)
+
+[node name="Wall_90" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 368)
+
+[node name="Wall_91" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 352)
+
+[node name="Wall_92" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 336)
+
+[node name="Wall_93" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 320)
+
+[node name="Wall_94" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 304)
+
+[node name="Wall_95" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 288)
+
+[node name="Wall_96" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 272)
+
+[node name="Wall_97" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(944, 256)
+
+[node name="Wall_98" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(928, 256)
+
+[node name="Wall_99" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(928, 240)
+
+[node name="Wall_100" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(912, 224)
+
+[node name="Wall_101" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(912, 208)
+
+[node name="Wall_103" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(912, 192)
+
+[node name="Wall_104" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(896, 192)
+
+[node name="Wall_105" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(896, 176)
+
+[node name="Wall_106" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(896, 160)
+
+[node name="Wall_107" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(880, 160)
+
+[node name="Wall_108" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(880, 144)
+
+[node name="Wall_109" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(880, 128)
+
+[node name="Wall_110" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(864, 128)
+
+[node name="Wall_111" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(864, 112)
+
+[node name="Wall_112" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(848, 112)
+
+[node name="Wall_113" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(848, 96)
+
+[node name="Wall_114" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(832, 96)
+
+[node name="Wall_115" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(832, 80)
+
+[node name="Wall_116" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(816, 80)
+
+[node name="Wall_117" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(816, 64)
+
+[node name="Wall_118" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(800, 64)
+
+[node name="Wall_119" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 64)
+
+[node name="Wall_120" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 48)
+
+[node name="Wall_121" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(768, 48)
+
+[node name="Wall_122" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 48)
+
+[node name="Wall_123" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 32)
+
+[node name="Wall_124" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 32)
+
+[node name="Wall_125" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 32)
+
+[node name="Wall_126" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 16)
+
+[node name="Wall_127" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 16)
+
+[node name="Wall_128" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 16)
+
+[node name="Wall_129" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 0)
+
+[node name="Wall_130" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 0)
+
+[node name="Wall_131" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 0)
+
+[node name="Wall_132" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(640, 0)
+
+[node name="Wall_133" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 0)
+
+[node name="Wall_134" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 0)
+
+[node name="Wall_135" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(592, 0)
+
+[node name="Wall_136" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 0)
+
+[node name="Wall_137" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 0)
+
+[node name="Wall_138" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(544, 0)
+
+[node name="Wall_139" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(528, 0)
+
+[node name="Wall_140" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 0)
+
+[node name="Wall_141" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 16)
+
+[node name="Wall_142" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 32)
+
+[node name="Wall_218" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 48)
+
+[node name="Wall_219" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 64)
+
+[node name="Wall_220" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 80)
+
+[node name="Wall_355" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(528, 80)
+
+[node name="Wall_356" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(544, 80)
+
+[node name="Wall_357" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 80)
+
+[node name="Wall_358" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(592, 80)
+
+[node name="Wall_359" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 80)
+
+[node name="Wall_360" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 80)
+
+[node name="Wall_361" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(640, 80)
+
+[node name="Wall_362" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(640, 96)
+
+[node name="Wall_363" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 96)
+
+[node name="Wall_364" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 96)
+
+[node name="Wall_365" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 96)
+
+[node name="Wall_366" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 112)
+
+[node name="Wall_367" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 112)
+
+[node name="Wall_368" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 112)
+
+[node name="Wall_369" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 112)
+
+[node name="Wall_370" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 128)
+
+[node name="Wall_371" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 128)
+
+[node name="Wall_372" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 144)
+
+[node name="Wall_373" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(768, 144)
+
+[node name="Wall_374" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(768, 160)
+
+[node name="Wall_375" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 160)
+
+[node name="Wall_376" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 176)
+
+[node name="Wall_377" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(800, 176)
+
+[node name="Wall_378" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(800, 192)
+
+[node name="Wall_379" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(816, 192)
+
+[node name="Wall_380" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(816, 208)
+
+[node name="Wall_381" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(832, 208)
+
+[node name="Wall_382" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(832, 224)
+
+[node name="Wall_383" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(832, 240)
+
+[node name="Wall_384" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(848, 240)
+
+[node name="Wall_385" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(848, 256)
+
+[node name="Wall_386" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(848, 272)
+
+[node name="Wall_387" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(864, 272)
+
+[node name="Wall_388" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(864, 288)
+
+[node name="Wall_396" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(848, 288)
+
+[node name="Wall_399" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(832, 288)
+
+[node name="Wall_400" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(816, 288)
+
+[node name="Wall_401" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(800, 288)
+
+[node name="Wall_402" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(784, 288)
+
+[node name="Wall_403" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(768, 288)
+
+[node name="Wall_404" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(752, 288)
+
+[node name="Wall_405" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 288)
+
+[node name="Wall_406" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 288)
+
+[node name="Wall_407" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 288)
+
+[node name="Wall_408" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 288)
+
+[node name="Wall_409" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 288)
+
+[node name="Wall_410" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 288)
+
+[node name="Wall_411" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 272)
+
+[node name="Wall_433" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(640, 272)
+
+[node name="Wall_434" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 272)
+
+[node name="Wall_435" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 256)
+
+[node name="Wall_436" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 256)
+
+[node name="Wall_437" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(592, 256)
+
+[node name="Wall_438" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 256)
+
+[node name="Wall_439" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 256)
+
+[node name="Wall_440" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(544, 256)
+
+[node name="Wall_441" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(528, 256)
+
+[node name="Wall_500" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(528, 192)
+
+[node name="Wall_505" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 192)
+
+[node name="Wall_506" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 208)
+
+[node name="Wall_507" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 208)
+
+[node name="Wall_508" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 208)
+
+[node name="Wall_509" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 208)
+
+[node name="Wall_510" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 224)
+
+[node name="Wall_511" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 224)
+
+[node name="Wall_512" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 224)
+
+[node name="Wall_513" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 240)
+
+[node name="Wall_514" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 240)
+
+[node name="Wall_515" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 256)
+
+[node name="Wall_516" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 256)
+
+[node name="Wall_517" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 272)
+
+[node name="Wall_518" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 272)
+
+[node name="Wall_519" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 288)
+
+[node name="Wall_520" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 304)
+
+[node name="Wall_521" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 320)
+
+[node name="Wall_522" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 336)
+
+[node name="Wall_523" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 336)
+
+[node name="Wall_524" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 352)
+
+[node name="Wall_525" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 368)
+
+[node name="Wall_526" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 368)
+
+[node name="Wall_527" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 384)
+
+[node name="Wall_528" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 384)
+
+[node name="Wall_529" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 400)
+
+[node name="Wall_530" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 400)
+
+[node name="Wall_531" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 416)
+
+[node name="Wall_532" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 416)
+
+[node name="Wall_533" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 416)
+
+[node name="Wall_534" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 432)
+
+[node name="Wall_535" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 432)
+
+[node name="Wall_536" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 432)
+
+[node name="Wall_537" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(528, 432)
+
+[node name="Wall_538" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(544, 432)
+
+[node name="Wall_539" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 432)
+
+[node name="Wall_540" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 432)
+
+[node name="Wall_541" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(592, 432)
+
+[node name="Wall_442" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 256)
+
+[node name="Wall_443" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 256)
+
+[node name="Wall_444" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 272)
+
+[node name="Wall_445" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 272)
+
+[node name="Wall_446" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 272)
+
+[node name="Wall_447" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 288)
+
+[node name="Wall_448" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 288)
+
+[node name="Wall_449" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 304)
+
+[node name="Wall_450" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 304)
+
+[node name="Wall_451" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 320)
+
+[node name="Wall_452" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 336)
+
+[node name="Wall_453" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 336)
+
+[node name="Wall_454" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 352)
+
+[node name="Wall_455" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 352)
+
+[node name="Wall_456" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 368)
+
+[node name="Wall_457" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 368)
+
+[node name="Wall_458" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 368)
+
+[node name="Wall_459" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 384)
+
+[node name="Wall_460" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 384)
+
+[node name="Wall_461" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(528, 384)
+
+[node name="Wall_462" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(544, 384)
+
+[node name="Wall_463" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(560, 384)
+
+[node name="Wall_464" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(576, 384)
+
+[node name="Wall_465" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(592, 384)
+
+[node name="Wall_466" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(608, 384)
+
+[node name="Wall_467" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 384)
+
+[node name="Wall_468" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(624, 368)
+
+[node name="Wall_469" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(640, 368)
+
+[node name="Wall_470" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 368)
+
+[node name="Wall_471" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 352)
+
+[node name="Wall_472" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 352)
+
+[node name="Wall_473" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 336)
+
+[node name="Wall_474" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 336)
+
+[node name="Wall_475" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 336)
+
+[node name="Wall_476" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 336)
+
+[node name="Wall_477" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 336)
+
+[node name="Wall_478" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(736, 352)
+
+[node name="Wall_479" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 352)
+
+[node name="Wall_480" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 368)
+
+[node name="Wall_481" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(720, 368)
+
+[node name="Wall_482" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 384)
+
+[node name="Wall_483" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(704, 384)
+
+[node name="Wall_484" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 400)
+
+[node name="Wall_485" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(688, 400)
+
+[node name="Wall_486" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 416)
+
+[node name="Wall_488" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(656, 432)
+
+[node name="Wall_487" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(672, 416)
+
+[node name="Wall_221" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 80)
+
+[node name="Wall_222" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 80)
+
+[node name="Wall_223" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 96)
+
+[node name="Wall_224" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 96)
+
+[node name="Wall_225" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 96)
+
+[node name="Wall_226" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 96)
+
+[node name="Wall_227" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 112)
+
+[node name="Wall_228" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 112)
+
+[node name="Wall_229" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 112)
+
+[node name="Wall_230" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 128)
+
+[node name="Wall_231" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 128)
+
+[node name="Wall_232" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 128)
+
+[node name="Wall_233" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 144)
+
+[node name="Wall_234" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 144)
+
+[node name="Wall_235" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 160)
+
+[node name="Wall_236" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 160)
+
+[node name="Wall_237" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 176)
+
+[node name="Wall_238" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 176)
+
+[node name="Wall_239" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 192)
+
+[node name="Wall_240" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(304, 192)
+
+[node name="Wall_241" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(304, 208)
+
+[node name="Wall_242" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(288, 208)
+
+[node name="Wall_243" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(288, 224)
+
+[node name="Wall_244" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(288, 240)
+
+[node name="Wall_245" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(272, 240)
+
+[node name="Wall_246" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(272, 256)
+
+[node name="Wall_247" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(272, 272)
+
+[node name="Wall_248" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(256, 272)
+
+[node name="Wall_249" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(256, 288)
+
+[node name="Wall_250" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(256, 304)
+
+[node name="Wall_251" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(256, 320)
+
+[node name="Wall_252" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(256, 336)
+
+[node name="Wall_253" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(256, 352)
+
+[node name="Wall_254" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(272, 352)
+
+[node name="Wall_255" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(272, 368)
+
+[node name="Wall_256" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(272, 384)
+
+[node name="Wall_257" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(288, 384)
+
+[node name="Wall_258" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(288, 400)
+
+[node name="Wall_259" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(288, 416)
+
+[node name="Wall_260" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(304, 416)
+
+[node name="Wall_261" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(304, 432)
+
+[node name="Wall_262" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 448)
+
+[node name="Wall_263" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 432)
+
+[node name="Wall_264" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 464)
+
+[node name="Wall_265" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 448)
+
+[node name="Wall_266" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 480)
+
+[node name="Wall_267" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 464)
+
+[node name="Wall_268" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 496)
+
+[node name="Wall_269" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 480)
+
+[node name="Wall_270" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 512)
+
+[node name="Wall_271" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 496)
+
+[node name="Wall_272" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 512)
+
+[node name="Wall_273" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 512)
+
+[node name="Wall_274" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 528)
+
+[node name="Wall_275" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 528)
+
+[node name="Wall_276" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 528)
+
+[node name="Wall_277" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(448, 544)
+
+[node name="Wall_278" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 544)
+
+[node name="Wall_279" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(464, 544)
+
+[node name="Wall_280" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(480, 560)
+
+[node name="Wall_281" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(512, 560)
+
+[node name="Wall_282" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(496, 560)
+
+[node name="Wall_144" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(472, 16)
+
+[node name="Wall_215" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(312, 0)
+
+[node name="Wall_216" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(312, 16)
+
+[node name="Wall_217" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(312, 32)
+
+[node name="Wall_145" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(456, 16)
+
+[node name="Wall_146" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(440, 16)
+
+[node name="Wall_147" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(440, 32)
+
+[node name="Wall_148" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(424, 32)
+
+[node name="Wall_149" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(408, 32)
+
+[node name="Wall_150" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(408, 48)
+
+[node name="Wall_151" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(392, 48)
+
+[node name="Wall_152" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(376, 48)
+
+[node name="Wall_153" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(376, 64)
+
+[node name="Wall_154" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(360, 64)
+
+[node name="Wall_155" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(344, 64)
+
+[node name="Wall_156" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(344, 80)
+
+[node name="Wall_157" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(328, 80)
+
+[node name="Wall_158" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(312, 80)
+
+[node name="Wall_159" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(312, 96)
+
+[node name="Wall_160" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(296, 96)
+
+[node name="Wall_161" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(296, 112)
+
+[node name="Wall_162" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(280, 112)
+
+[node name="Wall_163" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(280, 128)
+
+[node name="Wall_164" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 128)
+
+[node name="Wall_165" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 144)
+
+[node name="Wall_166" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 144)
+
+[node name="Wall_761" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 128)
+
+[node name="Wall_762" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 112)
+
+[node name="Wall_763" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 112)
+
+[node name="Wall_764" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 96)
+
+[node name="Wall_765" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 96)
+
+[node name="Wall_766" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 80)
+
+[node name="Wall_767" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 80)
+
+[node name="Wall_768" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 64)
+
+[node name="Wall_769" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 64)
+
+[node name="Wall_770" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 48)
+
+[node name="Wall_771" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 48)
+
+[node name="Wall_772" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 32)
+
+[node name="Wall_773" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 32)
+
+[node name="Wall_774" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 48)
+
+[node name="Wall_775" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 32)
+
+[node name="Wall_776" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 48)
+
+[node name="Wall_777" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 32)
+
+[node name="Wall_778" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 48)
+
+[node name="Wall_779" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 32)
+
+[node name="Wall_780" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(184, 48)
+
+[node name="Wall_781" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(184, 32)
+
+[node name="Wall_782" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(168, 48)
+
+[node name="Wall_783" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(168, 32)
+
+[node name="Wall_784" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(152, 48)
+
+[node name="Wall_785" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(152, 32)
+
+[node name="Wall_786" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(136, 48)
+
+[node name="Wall_787" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(136, 32)
+
+[node name="Wall_788" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(120, 48)
+
+[node name="Wall_789" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(120, 32)
+
+[node name="Wall_790" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(104, 48)
+
+[node name="Wall_791" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(104, 32)
+
+[node name="Wall_792" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(88, 48)
+
+[node name="Wall_793" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(88, 32)
+
+[node name="Wall_794" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(72, 48)
+
+[node name="Wall_795" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(72, 32)
+
+[node name="Wall_796" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 48)
+
+[node name="Wall_797" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 32)
+
+[node name="Wall_167" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 160)
+
+[node name="Wall_168" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 160)
+
+[node name="Wall_169" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 176)
+
+[node name="Wall_170" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 192)
+
+[node name="Wall_171" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 192)
+
+[node name="Wall_172" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 208)
+
+[node name="Wall_728" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 208)
+
+[node name="Wall_173" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 224)
+
+[node name="Wall_174" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 224)
+
+[node name="Wall_729" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(184, 208)
+
+[node name="Wall_730" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(184, 224)
+
+[node name="Wall_731" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(168, 208)
+
+[node name="Wall_732" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(168, 224)
+
+[node name="Wall_733" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(152, 208)
+
+[node name="Wall_734" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(152, 224)
+
+[node name="Wall_735" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(136, 208)
+
+[node name="Wall_736" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(136, 224)
+
+[node name="Wall_737" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(120, 208)
+
+[node name="Wall_738" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(120, 224)
+
+[node name="Wall_739" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(104, 208)
+
+[node name="Wall_740" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(104, 224)
+
+[node name="Wall_741" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(88, 208)
+
+[node name="Wall_742" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(88, 224)
+
+[node name="Wall_743" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(72, 208)
+
+[node name="Wall_744" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(72, 224)
+
+[node name="Wall_745" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 208)
+
+[node name="Wall_746" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 224)
+
+[node name="Wall_747" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 240)
+
+[node name="Wall_748" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 256)
+
+[node name="Wall_749" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 272)
+
+[node name="Wall_750" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 288)
+
+[node name="Wall_751" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 304)
+
+[node name="Wall_752" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 320)
+
+[node name="Wall_753" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 336)
+
+[node name="Wall_754" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 352)
+
+[node name="Wall_755" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 368)
+
+[node name="Wall_756" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 384)
+
+[node name="Wall_757" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 400)
+
+[node name="Wall_758" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 416)
+
+[node name="Wall_759" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(56, 432)
+
+[node name="Wall_175" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 240)
+
+[node name="Wall_176" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 256)
+
+[node name="Wall_177" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 272)
+
+[node name="Wall_178" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 288)
+
+[node name="Wall_179" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 304)
+
+[node name="Wall_180" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 320)
+
+[node name="Wall_181" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 336)
+
+[node name="Wall_182" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 352)
+
+[node name="Wall_183" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 368)
+
+[node name="Wall_184" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 384)
+
+[node name="Wall_185" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 400)
+
+[node name="Wall_188" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 432)
+
+[node name="Wall_614" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 432)
+
+[node name="Wall_615" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(184, 432)
+
+[node name="Wall_616" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(168, 432)
+
+[node name="Wall_617" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(152, 432)
+
+[node name="Wall_618" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 416)
+
+[node name="Wall_619" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(184, 416)
+
+[node name="Wall_620" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(168, 416)
+
+[node name="Wall_621" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(152, 416)
+
+[node name="Wall_186" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(200, 400)
+
+[node name="Wall_187" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 416)
+
+[node name="Wall_189" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 432)
+
+[node name="Wall_190" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 464)
+
+[node name="Wall_191" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 448)
+
+[node name="Wall_192" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 464)
+
+[node name="Wall_193" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 496)
+
+[node name="Wall_194" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 480)
+
+[node name="Wall_195" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 512)
+
+[node name="Wall_611" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 512)
+
+[node name="Wall_612" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 512)
+
+[node name="Wall_613" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 512)
+
+[node name="Wall_196" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 496)
+
+[node name="Wall_197" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(280, 528)
+
+[node name="Wall_607" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(264, 528)
+
+[node name="Wall_608" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(248, 528)
+
+[node name="Wall_609" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(232, 528)
+
+[node name="Wall_610" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(216, 528)
+
+[node name="Wall_198" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(280, 512)
+
+[node name="Wall_199" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(296, 544)
+
+[node name="Wall_200" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(296, 528)
+
+[node name="Wall_201" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(328, 544)
+
+[node name="Wall_202" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(312, 544)
+
+[node name="Wall_203" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(320, 560)
+
+[node name="Wall_204" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(352, 560)
+
+[node name="Wall_205" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(336, 560)
+
+[node name="Wall_206" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(344, 576)
+
+[node name="Wall_207" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(376, 576)
+
+[node name="Wall_208" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(360, 576)
+
+[node name="Wall_209" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(368, 592)
+
+[node name="Wall_210" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 592)
+
+[node name="Wall_211" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(384, 592)
+
+[node name="Wall_212" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(400, 608)
+
+[node name="Wall_213" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(432, 608)
+
+[node name="Wall_214" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(416, 608)
+
+[node name="Wall_102" parent="Walls" instance=ExtResource("6_888os")]
+position = Vector2(928, 224)
+
+[node name="Score" parent="." instance=ExtResource("7_nxrld")]
+visible = false
+
+[node name="Stopwatch" parent="." instance=ExtResource("8_cg4ff")]
+position = Vector2(880, 8)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ycmcf")
+playback_type = 1
+
+[node name="ExitMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_l2wws")
+
+[node name="Dead" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_7wtyh")
+autoplay = true
+
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="finished" from="ExitMusic" to="." method="_on_exit_music_finished"]

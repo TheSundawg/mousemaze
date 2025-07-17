@@ -27,6 +27,11 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(160, 96)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_ajely")
+
 [node name="cursor" parent="." instance=ExtResource("2_p2hwe")]
 
 [node name="detection" parent="." instance=ExtResource("3_8ni6x")]
@@ -35,6 +40,7 @@ color = Color(0, 0, 0, 1)
 position = Vector2(1016, 512)
 
 [node name="Stopwatch" parent="." instance=ExtResource("6_3yu0n")]
+visible = false
 position = Vector2(496, 0)
 
 [node name="TestLabel" type="Label" parent="."]
@@ -80,11 +86,6 @@ playback_type = 1
 
 [node name="ExitMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_3yu0n")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(160, 96)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("10_ajely")
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="finished" from="ExitMusic" to="." method="_on_exit_music_finished"]

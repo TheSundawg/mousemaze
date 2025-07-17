@@ -69,7 +69,6 @@ func _on_area_entered(area, mouse):
 		return
 	else:
 		lives_left += 1
-		print(lives_left)
 		$cursor/AnimationPlayer.play("dead")
 		get_viewport().warp_mouse(spawn)
 		$Dead.play()

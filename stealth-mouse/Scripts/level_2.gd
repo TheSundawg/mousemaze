@@ -30,6 +30,7 @@ func _ready():
 	GlobalEvents.can_pulse.connect(_on_can_pulse)
 	BgData.print_level.connect(_on_print_level)
 	BgData.volume.connect(_on_volume)
+	
 
 func _on_volume(toggled):
 	music = toggled
@@ -71,7 +72,6 @@ func _on_area_entered(area, mouse):
 		return
 	else:
 		lives_left += 1
-		print(lives_left)
 		$cursor/AnimationPlayer.play("dead")
 		get_viewport().warp_mouse(spawn)
 		$Dead.play()
@@ -86,7 +86,7 @@ func _on_exit_level(area, mouse):
 		$Score.visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 		GlobalEvents.pass_levels.emit(this_level, next_level)
-		BgData.level_data.emit($Score/TimeScore.text,lives_left,"Level 1")
+		BgData.level_data.emit($Score/TimeScore.text,lives_left,"Level 2")
 		$"cursor/DeathBox".process_mode = Node.PROCESS_MODE_DISABLED
 		$Music.stop()
 		$ExitMusic.play()

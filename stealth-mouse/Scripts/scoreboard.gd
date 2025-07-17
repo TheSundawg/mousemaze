@@ -25,4 +25,5 @@ func _on_try_again_pressed() -> void:
 
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Levels/MainMenu.tscn")
+	BgData.save_game.emit()
