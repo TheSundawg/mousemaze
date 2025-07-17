@@ -85,7 +85,7 @@ func _on_exit_level(area, mouse):
 		$Score/VBoxContainer/Continue.text = "MAIN MENU"
 		Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 		GlobalEvents.pass_levels.emit(this_level, next_level)
-		BgData.level_data.emit($Score/TimeScore.text,lives_left,"Level 5")
+		BgData.level_data.emit($Score/TimeScore.text,lives_left,"Level 6")
 		$"cursor/DeathBox".process_mode = Node.PROCESS_MODE_DISABLED
 		$Music.stop()
 		$ExitMusic.play()
